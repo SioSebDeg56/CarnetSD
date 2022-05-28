@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stage.C_profil">
+   <children>
+      <ImageView fitHeight="607.0" fitWidth="1200.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/bureau2.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="590.0" opacity="0.19" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="600.0" prefWidth="1200.0">
+         <top>
+            <Separator opacity="0.46" prefHeight="125.0" prefWidth="1200.0" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <AnchorPane prefHeight="475.0" prefWidth="411.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="8.0" layoutY="23.0" text="nom :">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font></Label>
+                  <Label layoutX="8.0" layoutY="66.0" text="prenom :">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="Lprenom" layoutX="93.0" layoutY="66.0" text="prenom">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="Lnom" layoutX="95.0" layoutY="22.0" text="nom">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <Label fx:id="LadrNum" layoutX="93.0" layoutY="107.0" text="Num">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <Label layoutX="7.0" layoutY="107.0" text="Adresse :">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LadrLib" layoutX="160.0" layoutY="107.0" text="Libelle">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LadrCP" layoutX="91.0" layoutY="152.0" text="CP">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LadrVille" layoutX="160.0" layoutY="152.0" text="Ville">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LadrPays" layoutX="84.0" layoutY="195.0" text="Pays">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <TableView fx:id="historiqueTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="591.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="CnomEntreprise" prefWidth="178.0" text="Nom Entreprise" />
+                <TableColumn fx:id="Cmethode" minWidth="0.0" prefWidth="148.0" text="Méthode Utilisé" />
+                  <TableColumn fx:id="Cretour" prefWidth="160.0" text="Retour" />
+                  <TableColumn fx:id="Cdate" prefWidth="104.0" text="Date" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
